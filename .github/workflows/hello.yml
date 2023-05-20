@@ -1,0 +1,10 @@
+name: Hello world
+
+on: push
+
+jobs:
+  say:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo Hello from GHA repository

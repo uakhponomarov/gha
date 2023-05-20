@@ -1,0 +1,8 @@
+name: Actions
+on: workflow_dispach:
+jobs:
+  first:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello from GHA
+        run: echo Hello from GHA action.yml

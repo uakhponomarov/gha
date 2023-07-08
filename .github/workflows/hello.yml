@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Say hello
         run: echo Hello from GHA repository
+      - name: Checkout
+        uses: actions/checkout@v3.5.3     
       - name: GH CLI
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

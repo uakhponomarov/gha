@@ -6,3 +6,8 @@ jobs:
     steps:
       - name: Hello from GHA
         run: echo Hello from GHA action.yml
+      - name: GH CLI
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create --title "The bug is fixed" --body "Everything works again"

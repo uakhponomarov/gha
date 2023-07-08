@@ -1,11 +1,11 @@
 name: Hello world
 
 on: push
-permissions:
-  write-all
+
 jobs:
   say:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - name: Say hello
         run: echo Hello from GHA repository

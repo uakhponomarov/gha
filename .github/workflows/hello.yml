@@ -15,4 +15,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh repo list
-          gh pr create --base second
+          gh pr create --title "The bug is fixed" --body "Everything works again" --base second

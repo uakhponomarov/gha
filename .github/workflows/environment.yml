@@ -19,4 +19,4 @@ jobs:
           echo LET US LOOK on $SHOWIT 
       - name: Get object
         run: |
-          echo ${{ toJSON(github) }}
+          echo "${{ toJSON(github) }}"

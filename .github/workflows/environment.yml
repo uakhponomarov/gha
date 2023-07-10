@@ -17,3 +17,6 @@ jobs:
           MY_SEC=$(${{ secrets.PASS }} | base64)
           SHOWIT=$(echo $MY_SEC | base64 --decode)
           echo LET US LOOK on $SHOWIT 
+      - name: Get object
+        run: |
+          echo ${{ toJSON(github) }}

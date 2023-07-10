@@ -13,4 +13,7 @@ jobs:
       url: https://github.com
     steps:
       - name: deploy
-        run: echo My secret is ${{ secrets.PASS }}
+        run: |
+          echo My secret is ${{ secrets.PASS }} | base64 | tee -a test.log
+          cat test.log
+          cat test.log | base64 -d

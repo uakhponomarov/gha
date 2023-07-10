@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: stage
-      url: https://github.com
+      url: https://viktor.com
     steps:
       - name: deploy
         run: |

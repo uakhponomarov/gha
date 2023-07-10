@@ -16,5 +16,9 @@ jobs:
         run: |
           echo My secret is ${{ secrets.PASS }} | base64 | tee -a test.log
           cat test.log
-          cat test.log | base64 -d > hide.sdd
-          cat hide.sdd
+          cat test.log | base64 -d > hide.log
+          echo =====================
+          cat test.log | base64 -d > hide.log
+          ls -l
+          cat hide.log
+          echo +++++++++++

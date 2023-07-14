@@ -1,0 +1,11 @@
+name: Releases
+
+on: 
+  release:
+    - created
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello

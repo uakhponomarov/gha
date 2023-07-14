@@ -9,4 +9,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo hello
+      - run: echo hello > Release.txt
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: Release.txt

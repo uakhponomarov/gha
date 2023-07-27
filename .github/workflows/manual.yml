@@ -1,0 +1,13 @@
+name: Manual test
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  first:
+    runs-on: [self-hosted, vagrant]
+    steps:
+      - name: Hello
+        run: echo Hello

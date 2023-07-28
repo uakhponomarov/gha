@@ -8,17 +8,17 @@ on:
 
 jobs:
   first:
-    runs-on: [self-hosted, vagrant]
+    runs-on: [self-hosted, docker]
     steps:
       - name: Hello
         run: echo Hello; sleep10
   second:
-    runs-on: [self-hosted, vagrant]
+    runs-on: [self-hosted, docker]
     steps:
       - name: Hello
         run: echo Hello second; sleep10
   third:
-    runs-on: [self-hosted, vagrant]
+    runs-on: [self-hosted, docker]
     steps:
       - name: Hello
         run: echo Hello third; sleep10        

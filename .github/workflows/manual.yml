@@ -15,8 +15,10 @@ jobs:
       - name: Hello
         run: |
           echo Hello
-          sleep 100
-          ls -l
+          sleep 3
+          ls ../ -l
+          mkdir NEW1
+          ls ../ -l
           cat README.md
           echo "FIRTST JOB" >> README.md
           cat README.md
@@ -27,8 +29,10 @@ jobs:
       - name: Hello
         run: |
           echo Hello
-          sleep 100
-          ls -l
+          sleep 3
+          ls ../ -l
+          mkdir NEW2
+          ls ../ -l
           cat README.md
           echo "SECOND JOB" >> README.md
           cat README.md
@@ -39,8 +43,10 @@ jobs:
       - name: Hello
         run: |
           echo Hello
-          sleep 100
-          ls -l
+          sleep 3
+          ls ../ -l
+          mkdir NEW3
+          ls ../ -l
           cat README.md
           echo "THIRD JOB" >> README.md
           cat README.md       

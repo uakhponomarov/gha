@@ -13,29 +13,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.3
       - name: Hello
-        run: |
-          set -x
+        run: |          
           pwd
-          cat README.md
+          echo "" >> README.md
           echo "FIRTST JOB" >> README.md
+          echo =========================
           cat README.md
+          echo =========================
   second:
     needs: first
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello
-        run: |
-          set -x
-          cat README.md
+        run: |          
+          echo =========================
           echo "SECOND JOB" >> README.md
           cat README.md
+          echo =========================
   third:
     needs: first
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello
-        run: |
-          set -x
-          cat README.md
+        run: |          
+          echo =========================
           echo "THIRD JOB" >> README.md
-          cat README.md       
+          cat README.md  
+          echo =========================

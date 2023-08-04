@@ -34,7 +34,8 @@ jobs:
           cat README.md
           echo '========================='
           cd ../../
-          mkdir new
+          mkdir -p new
+          echo "LINE" >> new/file1
           pwd
           ll
   third:

@@ -10,15 +10,17 @@ jobs:
   first:
     runs-on: [self-hosted, docker]
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.3
       - name: Hello
-        run: echo Hello; sleep 100
+        run: echo Hello; sleep 100; ls -l
   second:
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello
-        run: echo Hello second; sleep 100
+        run: echo Hello second; sleep 100; ls -l
   third:
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello
-        run: echo Hello third; sleep 100        
+        run: echo Hello third; sleep 100; ls -l       

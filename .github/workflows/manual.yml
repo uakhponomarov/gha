@@ -16,6 +16,9 @@ jobs:
         run: |
           echo Hello
           sleep 3
+          pwd
+          cd ..
+          pwd
           ls ../ -l
           mkdir NEW1
           ls ../ -l

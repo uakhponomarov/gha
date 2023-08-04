@@ -15,7 +15,6 @@ jobs:
       - name: Hello
         run: |
           set -x
-          sleep 1
           pwd
           cat README.md
           echo "FIRTST JOB" >> README.md
@@ -27,7 +26,6 @@ jobs:
       - name: Hello
         run: |
           set -x
-          sleep 1
           cat README.md
           echo "SECOND JOB" >> README.md
           cat README.md
@@ -38,7 +36,6 @@ jobs:
       - name: Hello
         run: |
           set -x
-          sleep 1
           cat README.md
           echo "THIRD JOB" >> README.md
           cat README.md       

@@ -35,6 +35,8 @@ jobs:
           echo '========================='
           cd ../../
           mkdir new
+          pwd
+          ll
   third:
     needs: first
     runs-on: [self-hosted, docker]

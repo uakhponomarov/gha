@@ -25,7 +25,8 @@ jobs:
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello
-        run: |          
+        run: |  
+          pwd
           echo '========================='
           echo "SECOND JOB" >> README.md
           cat README.md
@@ -35,7 +36,8 @@ jobs:
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello
-        run: |          
+        run: | 
+          pwd
           echo '========================='
           echo "THIRD JOB" >> README.md
           cat README.md  

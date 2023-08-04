@@ -13,16 +13,34 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.3
       - name: Hello
-        run: echo Hello; sleep 100; ls -l
+        run: |
+          echo Hello
+          sleep 100
+          ls -l
+          cat README.md
+          echo "FIRTST JOB" >> README.md
+          cat README.md
   second:
     needs: first
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello
-        run: echo Hello second; sleep 100; ls -l
+        run: |
+          echo Hello
+          sleep 100
+          ls -l
+          cat README.md
+          echo "SECOND JOB" >> README.md
+          cat README.md
   third:
     needs: first
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello
-        run: echo Hello third; sleep 100; ls -l       
+        run: |
+          echo Hello
+          sleep 100
+          ls -l
+          cat README.md
+          echo "THIRD JOB" >> README.md
+          cat README.md       

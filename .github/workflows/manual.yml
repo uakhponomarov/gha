@@ -14,9 +14,10 @@ jobs:
         uses: actions/checkout@v3.5.3
       - name: Hello
         run: |          
-          ln -s ../../../_common_workspace ws
-          cp -r . ws
-          ls -l
+          ln -s ../../../_common_workspace ws  
+          echo "" >> README.md
+          echo "FIRTST JOB" >> README.md
+          ls -l ws
           echo "" >> README.md
           echo "FIRTST JOB" >> README.md
           echo '========================='

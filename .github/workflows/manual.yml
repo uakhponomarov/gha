@@ -30,15 +30,6 @@ jobs:
         run: |  
           pwd
           ls -l
-          echo '========================='
-          echo "SECOND JOB" >> README.md
-          cat README.md
-          echo '========================='
-          cd ../../../
-          mkdir -p new
-          echo "LINE" >> new/file1
-          pwd
-          ll
   third:
     needs: first
     runs-on: [self-hosted, docker]
@@ -48,7 +39,3 @@ jobs:
           pwd
           cp -r ../../../new . 
           ls -l
-          echo '========================='
-          echo "THIRD JOB" >> README.md
-          cat README.md  
-          echo '========================='

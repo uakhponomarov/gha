@@ -15,14 +15,9 @@ jobs:
       - name: Hello
         run: |          
           ln -s ../../../_common_workspace ws  
-          echo "" >> README.md
-          echo "FIRTST JOB" >> README.md
+          echo "" >> ws/README.md
+          echo "FIRTST JOB" >> ws/README.md
           ls -l ws
-          echo "" >> README.md
-          echo "FIRTST JOB" >> README.md
-          echo '========================='
-          cat README.md
-          echo '========================='
   second:
     needs: first
     runs-on: [self-hosted, docker]
@@ -41,6 +36,5 @@ jobs:
         run: | 
           ln -s ../../../_common_workspace ws
           pwd
-          cp -r ../../../new . 
           ls -l
           ls -l ws

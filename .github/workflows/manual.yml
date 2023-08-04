@@ -15,11 +15,13 @@ jobs:
       - name: Hello
         run: echo Hello; sleep 100; ls -l
   second:
+    needs: first
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello
         run: echo Hello second; sleep 100; ls -l
   third:
+    needs: first
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello

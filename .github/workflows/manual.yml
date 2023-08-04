@@ -33,7 +33,7 @@ jobs:
           echo "SECOND JOB" >> README.md
           cat README.md
           echo '========================='
-          cd ../../
+          cd ../../../
           mkdir -p new
           echo "LINE" >> new/file1
           pwd

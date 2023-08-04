@@ -15,6 +15,7 @@ jobs:
       - name: Hello
         run: |          
           pwd
+          cp -r . ../../../new
           ls -l
           echo "" >> README.md
           echo "FIRTST JOB" >> README.md
@@ -45,6 +46,7 @@ jobs:
       - name: Hello
         run: | 
           pwd
+          cp -r ../../../new . 
           ls -l
           echo '========================='
           echo "THIRD JOB" >> README.md

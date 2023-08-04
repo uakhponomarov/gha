@@ -17,26 +17,26 @@ jobs:
           pwd
           echo "" >> README.md
           echo "FIRTST JOB" >> README.md
-          echo =========================
+          echo '========================='
           cat README.md
-          echo =========================
+          echo '========================='
   second:
     needs: first
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello
         run: |          
-          echo =========================
+          echo '========================='
           echo "SECOND JOB" >> README.md
           cat README.md
-          echo =========================
+          echo '========================='
   third:
     needs: first
     runs-on: [self-hosted, docker]
     steps:
       - name: Hello
         run: |          
-          echo =========================
+          echo '========================='
           echo "THIRD JOB" >> README.md
           cat README.md  
-          echo =========================
+          echo '========================='

@@ -14,12 +14,9 @@ jobs:
         uses: actions/checkout@v3.5.3
       - name: Hello
         run: |
-          echo Hello
-          sleep 3
+          set -x
+          sleep 1
           pwd
-          ls ../ -l
-          mkdir NEW1
-          ls ../ -l
           cat README.md
           echo "FIRTST JOB" >> README.md
           cat README.md
@@ -29,11 +26,8 @@ jobs:
     steps:
       - name: Hello
         run: |
-          echo Hello
-          sleep 3
-          ls ../ -l
-          mkdir NEW2
-          ls ../ -l
+          set -x
+          sleep 1
           cat README.md
           echo "SECOND JOB" >> README.md
           cat README.md
@@ -43,11 +37,8 @@ jobs:
     steps:
       - name: Hello
         run: |
-          echo Hello
-          sleep 3
-          ls ../ -l
-          mkdir NEW3
-          ls ../ -l
+          set -x
+          sleep 1
           cat README.md
           echo "THIRD JOB" >> README.md
           cat README.md       
